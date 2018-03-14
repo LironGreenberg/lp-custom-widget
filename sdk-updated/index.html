@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>LivePerson SDK client example 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../node_modules/client-SDK/dist/client-SDK.js"></script>
+    <script src="js/example4.js"></script>
+</head>
+
+<body style="word-break: break-word">
+    <div class="notifyBox">
+        <button class="notifyButton" onclick="startSendingNotification()" title="Notify">Notify</button>
+        <button class="stopNotifyButton" onclick="stopSendingNotification()" title="stopNotify">Stop Notify</button>
+    </div>
+    <div class="commandBox">
+        <label for="sdkWriteMain">Write:</label>
+        <select id="sdkWriteMain" class="commandInput" name="commandInput" style="width:80px">
+            <option value="chatInfo">chatInfo</option>
+            <option value="visitorinfo">visitorinfo</option>
+            <option value="chattingAgentInfo">chattingAgentInfo</option>
+            <option value="agentInfo">agentInfo</option>
+            <option value="messagingInfo">messagingInfo</option>
+            <option value="chatTranscript">chatTranscript</option>
+            <option value="surveyQuestions">surveyQuestions</option>
+            <option value="campaignInfo">campaignInfo</option>
+            <option value="engagementInfo">engagementInfo</option>
+            <option value="visitorJourney">visitorJourney</option>
+            <option value="authenticatedData">authenticatedData</option>
+            <option value="SDE">SDE</option>
+            <option value="customVariables">customVariables</option>
+            <option value="splitSession">splitSession</option>
+        </select>
+        <select id="sdkFields" class="commandInput" name="commandInput">
+        </select>
+        <button class="commandButton" onclick="writeCommand()" title="Write">Write</button>
+    </div>
+    <div class="getBox">
+        <input class="getInput" type="text" name="getInput" />
+        <button class="getButton" onclick="get()" title="Write">Get</button>
+        <div class="getResults"></div>
+    </div>
+    <div class="bindBox">
+        <input class="bindInput" type="text" name="bindInput" />
+        <button class="bindButton" onclick="bind()" title="bind">Bind</button>
+        <button class="unbindButton" onclick="unbind()" title="bind">Unbind</button>
+        <div class="bindResults"></div>
+    </div>
+    <div class="logBox">
+        <textarea disabled style="width: 100%; height: 450px;"></textarea>
+    </div>
+</body>
+
+</html>
